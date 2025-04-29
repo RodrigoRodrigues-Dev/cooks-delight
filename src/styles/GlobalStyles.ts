@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import colors from './colors';
 
 export const Reset = createGlobalStyle`
   * {
@@ -11,5 +12,7 @@ export const Reset = createGlobalStyle`
 
   body {
     font-size: 14px;
+    background-color: ${colors.Background};
+    color: ${colors.Dark};
   }
 `;

@@ -5,21 +5,25 @@ import MenuMobile from './components/MobileMenu';
 import Header from './containers/Header';
 import Footer from './containers/Footer';
 import CTASection from './containers/CallToActionSection';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
 
   return (
-    <Container>
-      <Header toggleMenuMobile={() => setMenuVisible(!menuVisible)} />
-      <MenuMobile
-        onClose={() => setMenuVisible(false)}
-        $menuVisible={menuVisible}
-      />
-      <Outlet />
-      <CTASection></CTASection>
-      <Footer />
-    </Container>
+    <Provider store={store}>
+      <Container>
+        <Header toggleMenuMobile={() => setMenuVisible(!menuVisible)} />
+        <MenuMobile
+          onClose={() => setMenuVisible(false)}
+          $menuVisible={menuVisible}
+        />
+        <Outlet />
+        <CTASection></CTASection>
+        <Footer />
+      </Container>
+    </Provider>
   );
 }
 

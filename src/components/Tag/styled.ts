@@ -9,6 +9,7 @@ export const TagStyled = styled.div`
   margin: 8px 0;
   padding: 4px 0;
   max-width: 85px;
+  min-width: 85px;
 
   text-transform: uppercase;
   font-weight: 700;

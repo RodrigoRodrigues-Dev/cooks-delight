@@ -16,9 +16,16 @@ const api = createApi({
     }),
     getRandomSelection: builder.query<CategoryResponse, void>({
       query: () => 'randomselection.php'
+    }),
+    getRecipesCategory: builder.query<CategoryResponse, string>({
+      query: filter => `filter.php?c=${filter}`
     })
   })
 });
 
-export const { useGetMealsQuery, useGetRandomSelectionQuery } = api;
+export const {
+  useGetMealsQuery,
+  useGetRandomSelectionQuery,
+  useGetRecipesCategoryQuery
+} = api;
 export default api;

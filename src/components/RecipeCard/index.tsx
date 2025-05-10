@@ -10,12 +10,15 @@ import {
   TagsLabel
 } from './styled';
 
+import { Link } from 'react-router-dom';
+
 export type RecipesCardTypes = {
   $title?: string;
   $description?: string;
   $tags?: string;
   $img?: string;
   $category?: string;
+  $recipeID?: string;
 };
 
 const RecipeCard = ({
@@ -23,7 +26,8 @@ const RecipeCard = ({
   $tags,
   $title,
   $img,
-  $category
+  $category,
+  $recipeID
 }: RecipesCardTypes) => {
   const formatTag = (tags?: string | null): string => {
     if (!tags) {
@@ -49,7 +53,9 @@ const RecipeCard = ({
         </DescriptionText>
         <InfoSection>
           <TagsLabel>{formatTag($tags)}</TagsLabel>
-          <ActionButton $type="primary">view recipe</ActionButton>
+          <Link to={`/recipe/${$recipeID}`}>
+            <ActionButton $type="primary">view recipe</ActionButton>
+          </Link>
         </InfoSection>
       </ContentArea>
     </CardWrapper>

@@ -1,7 +1,7 @@
 import { ParagraphStyled } from './styled';
 
 export type ParagraphProps = {
-  children?: string;
+  children?: React.ReactNode;
   $type?: 'primary' | 'secondary' | 'tertiary';
   $size?: number;
 };

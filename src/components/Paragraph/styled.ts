@@ -7,7 +7,7 @@ export const ParagraphStyled = styled.p<ParagraphProps>`
 
   ${({ $type }) => $type === 'primary' && `color: ${colors.Dark};`}
 
-  ${({ $type }) => $type === 'secondary' && `color: rgba(38, 37, 34, 80%);`}
+  ${({ $type }) => $type === 'secondary' && `color: rgba(51, 51, 51, 80%);`}
 
   ${({ $type }) => $type === 'tertiary' && `color: ${colors.Background};`}
 `;

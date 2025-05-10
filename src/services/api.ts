@@ -19,6 +19,9 @@ const api = createApi({
     }),
     getRecipesCategory: builder.query<CategoryResponse, string>({
       query: filter => `filter.php?c=${filter}`
+    }),
+    getRecipesID: builder.query<CategoryResponse, string>({
+      query: ID => `lookup.php?i=${ID}`
     })
   })
 });
@@ -26,6 +29,7 @@ const api = createApi({
 export const {
   useGetMealsQuery,
   useGetRandomSelectionQuery,
-  useGetRecipesCategoryQuery
+  useGetRecipesCategoryQuery,
+  useGetRecipesIDQuery
 } = api;
 export default api;

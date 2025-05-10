@@ -70,6 +70,7 @@ const FeaturedSection = () => {
                 meal && (
                   <RecipeCard
                     key={meal.idMeal}
+                    $recipeID={meal.idMeal}
                     $img={meal.strMealThumb}
                     $title={meal.strMeal}
                     $description={meal.strInstructions}

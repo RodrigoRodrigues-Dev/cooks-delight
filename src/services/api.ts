@@ -22,6 +22,10 @@ const api = createApi({
     }),
     getRecipesID: builder.query<CategoryResponse, string>({
       query: ID => `lookup.php?i=${ID}`
+    }),
+    getRecipeSearch: builder.query<CategoryResponse, string>({
+      query: name =>
+        `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
     })
   })
 });
@@ -30,6 +34,7 @@ export const {
   useGetMealsQuery,
   useGetRandomSelectionQuery,
   useGetRecipesCategoryQuery,
-  useGetRecipesIDQuery
+  useGetRecipesIDQuery,
+  useGetRecipeSearchQuery
 } = api;
 export default api;

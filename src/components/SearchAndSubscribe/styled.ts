@@ -43,11 +43,11 @@ export const SearchButton = styled.button<ButtonWrapperProps>`
   align-items: center;
   justify-content: center;
 
-  width: 37px;
-  height: 37px;
+  min-width: 37px;
+  min-height: 37px;
 
   border: none;
-  border-radius: 16px;
+  border-radius: 50%;
   ${({ $main }) => searchButtonBg($main)}
 
   &:hover {

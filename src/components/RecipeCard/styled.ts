@@ -2,11 +2,18 @@ import styled from 'styled-components';
 import { ParagraphStyled } from '../Paragraph/styled';
 import { RecipesCardTypes } from './index';
 import { ButtonStyled } from '../Button/styled';
+import colors from '../../styles/colors';
 
 export const CardWrapper = styled.div<RecipesCardTypes>`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   position: relative;
   overflow: hidden;
-  background-color: white;
+
+  background-color: ${colors.Light};
+  border: 1px solid rgba(38, 37, 34, 16%);
   border-radius: 32px;
 `;
 

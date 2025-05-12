@@ -38,6 +38,8 @@ const RecipeCard = ({
 
   formatTag($tags);
 
+  const tagArr = $tags?.split(',').slice(0, 3);
+
   return (
     <CardWrapper>
       <CardImage $img={$img} />
@@ -52,8 +54,18 @@ const RecipeCard = ({
           {`${$description?.slice(0, 120)}...`}
         </DescriptionText>
         <InfoSection>
-          <TagsLabel>{formatTag($tags)}</TagsLabel>
-          <Link to={`/recipe/${$recipeID}`}>
+          <TagsLabel>
+            {tagArr?.map((tag, index) => <span key={index}>{tag}. </span>)}
+          </TagsLabel>
+          <Link
+            to={`/recipe/${$recipeID}`}
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              })
+            }
+          >
             <ActionButton $type="primary">view recipe</ActionButton>
           </Link>
         </InfoSection>

@@ -3,6 +3,7 @@ import colors from '../../styles/colors';
 import { ParagraphStyled } from '../../components/Paragraph/styled';
 
 export const HeroSectionContainer = styled.section`
+  z-index: 1;
   position: relative;
   overflow: hidden;
   background-image: url(https://cooks-delight-images.vercel.app/HeroSection.png);
@@ -15,7 +16,7 @@ export const HeroSectionContainer = styled.section`
   &::after {
     content: '';
 
-    z-index: 1;
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
@@ -24,6 +25,10 @@ export const HeroSectionContainer = styled.section`
     background-color: ${colors.Dark};
     opacity: 0.6;
   }
+`;
+
+export const RecipesSectionLink = styled.div`
+  z-index: 1;
 `;
 
 export const HeroTextWrapper = styled.div`
@@ -39,7 +44,7 @@ export const HeroTextWrapper = styled.div`
 `;
 
 export const TextWrapper = styled(ParagraphStyled)`
-  z-index: 99;
+  z-index: 1;
   width: 427px;
   text-align: center;
   padding: 12px 0 40px 0;

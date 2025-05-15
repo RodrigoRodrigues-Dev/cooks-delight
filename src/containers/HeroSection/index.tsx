@@ -1,16 +1,33 @@
+import { HashLink } from 'react-router-hash-link';
+
 import Button from '../../components/Button';
 import Title from '../../components/Title';
-import { HeroSectionContainer, HeroTextWrapper, TextWrapper } from './styled';
+import {
+  HeroSectionContainer,
+  HeroTextWrapper,
+  TextWrapper,
+  RecipesSectionLink
+} from './styled';
 
 const HeroSection = () => (
-  <HeroSectionContainer>
+  <HeroSectionContainer id="hero-section">
     <HeroTextWrapper>
       <Title>Unleash Culinary Excellence</Title>
       <TextWrapper $size={21} $type="tertiary">
         Explore a world of flavors, discover handcrafted recipes, and let the
         aroma of our passion for cooking fill your kitchen
       </TextWrapper>
-      <Button $type="secondary">explore recipes</Button>
+      <RecipesSectionLink>
+        <HashLink
+          smooth
+          scroll={el => {
+            window.scrollTo({ top: el.offsetTop - 95, behavior: 'smooth' });
+          }}
+          to="/#recipes-section"
+        >
+          <Button $type="secondary">explore recipes</Button>
+        </HashLink>
+      </RecipesSectionLink>
     </HeroTextWrapper>
   </HeroSectionContainer>
 );

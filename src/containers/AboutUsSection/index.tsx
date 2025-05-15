@@ -12,7 +12,7 @@ import {
 } from './styled';
 
 const AboutUsSection = () => (
-  <AboutUsWrapper>
+  <AboutUsWrapper id="about-us-section">
     <TextWrapper>
       <Tag>About Us</Tag>
       <Title $type="Medium">Our Culinary Chronicle</Title>

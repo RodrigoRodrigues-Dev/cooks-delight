@@ -50,7 +50,7 @@ const FeaturedSection = () => {
   };
 
   return (
-    <FeaturedWrapper>
+    <FeaturedWrapper id="featured-section">
       <FeaturedNavigation>
         <Title $type="Medium">featured recipes</Title>
         <NavControls>

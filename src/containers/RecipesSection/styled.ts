@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ButtonStyled } from '../../components/Button/styled';
 import colors from '../../styles/colors';
 
-export const RecipesWrapper = styled.div`
+export const RecipesWrapper = styled.section`
   margin: 80px 0;
 `;
 

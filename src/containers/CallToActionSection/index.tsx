@@ -12,7 +12,7 @@ import {
 } from './styled';
 
 const CTASection = () => (
-  <CTASectionContainer>
+  <CTASectionContainer id="cta-section">
     <ElipseTop
       src="https://cooks-delight-images.vercel.app/Ellipse.png"
       alt=""

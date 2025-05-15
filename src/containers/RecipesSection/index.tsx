@@ -93,7 +93,7 @@ const RecipesSection: React.FC = () => {
   }, [renderNineRecipes, chuckRecipes]);
 
   return (
-    <RecipesWrapper>
+    <RecipesWrapper id="recipes-section">
       <RecipesHeader>
         <TextWrapper>
           <Tag>Recipes</Tag>

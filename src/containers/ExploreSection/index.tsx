@@ -12,7 +12,7 @@ import {
 } from './styled';
 
 const ExploreSection = () => (
-  <ExploreSectionContainer>
+  <ExploreSectionContainer id="explore-section">
     <FilterTextWrapper>
       <FilterTextWrapperContent>
         <Tag>explore</Tag>

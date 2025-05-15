@@ -3,7 +3,7 @@ import colors from '../../styles/colors';
 import { MdOutlineNavigateNext } from 'react-icons/md';
 import { GrFormPrevious } from 'react-icons/gr';
 
-export const FeaturedWrapper = styled.div`
+export const FeaturedWrapper = styled.section`
   border: 1px solid rgba(38, 37, 34, 24%);
   border-radius: 32px;
 

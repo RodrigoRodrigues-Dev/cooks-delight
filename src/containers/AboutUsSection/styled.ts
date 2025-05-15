@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ParagraphStyled } from '../../components/Paragraph/styled';
 
-export const AboutUsWrapper = styled.div`
+export const AboutUsWrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);

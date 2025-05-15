@@ -1,46 +1,94 @@
-# Getting Started with Create React App
+<h1 align="center">
+  Cooks Delight
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O **Cooks Delight** é uma aplicação React que permite aos usuários explorar, filtrar e visualizar receitas de diversas categorias com navegação suave entre seções, busca dinâmica integrada e páginas de detalhes completas para cada prato.
 
-## Available Scripts
+<p align="center">
+  <img src=".github/preview-home.png" width="100%" />
+</p>
 
-In the project directory, you can run:
 
-### `npm start`
+## 💻 Visão Geral
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Cooks Delight** é uma aplicação React moderna e responsiva que exibe uma coleção selecionada de receitas, com navegação suave dentro da página, obtenção dinâmica de dados e interface polida construída completamente com Styled Components. Entre seus principais diferenciais estão:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Estrutura modular por containers (Hero, Explore, Featured, Recipes, About Us) para uma clara separação de responsabilidades.
 
-### `npm test`
+- Roteamento cliente com React Router v6, incluindo links comuns e HashLinks para navegação suave entre seções.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Gerenciamento de estado global utilizando Redux Toolkit e RTK Query para:
 
-### `npm run build`
+• Buscar receitas “latest”, “random”, por categoria, por ID ou por pesquisa diretamente na TheMealDB API.<br/>
+• Controlar visibilidade de elementos de UI (menu mobile, SearchBox) e rastrear a seção ativa para efeito de scroll‑spy.
+<br/>
+- Styled Components para theming, estilos globais (via .editorconfig e configs de Prettier/ESLint) e componentes individuais (Button, Paragraph, Title, Tag, RecipeCard etc.).
+<br/>
+A aplicação utiliza o **Redux Toolkit** com **RTK Query** para gerenciamento de estado global e requisições à API de forma eficiente, aproveitando cache integrado e geração automática de hooks para componentes, e adota Styled Components (CSS‑in‑JS) para estilização modular e responsiva, garantindo que cada componente carregue apenas seus próprios estilos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🥗 Recipe
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A página de receita permite aos usuários visualizar todos os detalhes de um prato — incluindo título, imagem em alta resolução, instruções passo a passo, lista dinâmica de ingredientes com medidas — e ainda navegar suavemente pelas seções relacionadas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="center">
+  <img src=".github/preview-recipe.png" width="100%" />
+</p>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🔗 Protótipo de Design
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+O layout e estilo deste projeto foram inspirados no template “FREE Cooking & Recipes Blog Template” disponível na Figma Community, que fornece estruturas de seções como página inicial, detalhes de receita, lista e post de blog, além de padrões de tipografia e paleta de cores Figma.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Para mais detalhes e acesso ao arquivo, visite:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-**Figma Community: FREE Cooking & Recipes Blog Template:** [Figma Design](https://www.figma.com/design/IuCD6iIodn4PAwDZuI0weD/-FREE--Cooking---Recipes-Blog-Template--Community-?node-id=7-360&t=egRikdgcVrBSbdll-0)
 
-## Learn More
+## ⚙️ Funcionalidades
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Scroll‑spy no header:**  implementado via Intersection Observer API, que observa a visibilidade de cada seção e atualiza o hash da URL conforme o usuário rola a página.
+- **Filtragem de receitas por categoria:** alimentada por chamadas RTK Query do Redux Toolkit, permitindo que o usuário selecione categorias (All, Vegan, Breakfast, Starter, Dessert etc.) e veja somente as receitas correspondentes.
+- **Busca em tempo real:** com o endpoint getRecipeSearch, exibindo resultados dinamicamente em um modal controlado por Redux para abrir/fechar.
+- **Página de detalhes da receita:** que consome o endpoint getRecipesID, exibindo título, imagem, instruções e lista dinâmica de ingredientes e medidas.
+- **Gerenciamento global de estado:** com **Redux Toolkit** e **RTK Query**, aproveitando cache integrado e geração automática de hooks para requisições eficientes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📚  Tecnologias
+
+Aqui estão as principais tecnologias utilizadas neste projeto:
+
+- **React:** Biblioteca JavaScript para construção de interfaces de usuário baseadas em componentes, que atualiza eficientemente a DOM conforme os dados mudam.
+- **React Router:** Solução de roteamento declarativo para aplicações React, permitindo naveção entre páginas e suporte a HashLinks para âncoras.
+- **Redux Toolkit:** Conjunto de ferramentas opinativo que simplifica a configuração do Redux, cria reducers mais facilmente e já inclui boas práticas por padrão.
+- **RTK Query:** Módulo de data fetching e caching integrado ao Redux Toolkit, que gera hooks automaticamente e gerencia cache de forma eficiente.
+- **Styled Components:** Biblioteca CSS‑in‑JS que permite escrever CSS diretamente em JavaScript, vinculando estilos ao ciclo de vida dos componentes.
+
+## 🛠️ Instalação
+
+### Requisitos
+
+- Node.js (versão 20 ou superior)
+- npm (versão 8 ou superior)
+
+### Passos
+
+1. **Clone o repositório:**
+
+```sh
+git clone https://github.com/RodrigoRodrigues-Dev/Cooks-Delight.git
+
+cd Cooks-Delight
+```
+
+2. **Instale as dependências:**
+
+```sh
+npm install
+```
+<br>
+
+## 📃 Licença
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+<br>
+
+
+## ☎️ Contato
+Desenvolvido por [Rodrigo Rodrigues](https://github.com/RodrigoRodrigues-Dev). Entre em contato por 📧 [rodrigorodriguesdevcontato@gmail.com](mailto:rodrigorodriguesdevcontato@gmail.com)

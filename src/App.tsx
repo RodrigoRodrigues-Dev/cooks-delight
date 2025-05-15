@@ -14,6 +14,8 @@ import Footer from './containers/Footer';
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [location, setLocation] = useState(String);
+
   const searchBoxVisibility = useSelector(
     (state: RootState) => state.searchBoxVisibility.isVisible
   );
@@ -30,18 +32,33 @@ function App() {
     }
   }, [searchBoxVisibility, menuVisible]);
 
+  const handleHash = () => {
+    setLocation(window.location.hash);
+    if (window.scrollY === 0) {
+      const urlWithoutHash = window.location.origin + window.location.pathname;
+      window.history.replaceState(null, '', urlWithoutHash);
+    }
+  };
+
+  window.addEventListener('scroll', handleHash);
+
   return (
-    <Container>
-      <Header toggleMenuMobile={() => setMenuVisible(!menuVisible)} />
-      <MenuMobile
-        onClose={() => setMenuVisible(false)}
-        $menuVisible={menuVisible}
+    <>
+      <Header
+        toggleMenuMobile={() => setMenuVisible(!menuVisible)}
+        $location={location}
       />
-      <SearchBox />
-      <Outlet />
-      <CTASection />
-      <Footer />
-    </Container>
+      <Container>
+        <MenuMobile
+          onClose={() => setMenuVisible(false)}
+          $menuVisible={menuVisible}
+        />
+        <SearchBox />
+        <Outlet />
+        <CTASection />
+        <Footer />
+      </Container>
+    </>
   );
 }
 

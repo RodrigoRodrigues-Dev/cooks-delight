@@ -40,7 +40,6 @@ const SearchBox = () => {
 
   const meals: Meal[] = recipes?.meals ?? [];
 
-  console.log(meals);
   return (
     <SearchResultsContainer $boxVisibility={searchBoxVisibility}>
       <SearchModal>

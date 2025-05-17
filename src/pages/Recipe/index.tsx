@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom';
 import { useGetRecipesIDQuery } from '../../services/api';
 
-import FeaturedSection from '../../containers/FeaturedSection';
+import FeaturedSection from '../../containers/sections/SectionFeatured';
 
-import Paragraph from '../../components/Paragraph';
-import Tag from '../../components/Tag';
-import Title from '../../components/Title';
+import Paragraph from '../../components/common/Paragraph';
+import Tag from '../../components/ui/Tag';
+import Title from '../../components/common/Title';
 
 import {
   RecipeWrapper,
@@ -20,7 +20,7 @@ import {
   CardList,
   InfoCardItem,
   StyledHomeButton
-} from './styled';
+} from './styles';
 
 interface Meal {
   idMeal: string;

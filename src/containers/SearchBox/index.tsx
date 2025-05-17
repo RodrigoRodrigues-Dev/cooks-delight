@@ -17,7 +17,7 @@ import {
   CloseButtonStyled,
   RecipeList,
   RecipeListItem
-} from './styled';
+} from './styles';
 
 const SearchBox = () => {
   const [name, setName] = useState('');

@@ -4,13 +4,13 @@ import { Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import type { RootState } from './store';
 
-import Container from './components/LayoutContainer/styled';
-import MenuMobile from './components/MobileMenu';
+import Container from './components/layout/LayoutContainer/styled';
+import MenuMobile from './components/layout/MobileMenu';
 
-import Header from './containers/Header';
+import Header from './components/layout/Header';
 import SearchBox from './containers/SearchBox';
-import CTASection from './containers/CallToActionSection';
-import Footer from './containers/Footer';
+import CTASection from './containers/sections/SectionCallToAction';
+import Footer from './components/layout/Footer';
 
 function App() {
   const [menuVisible, setMenuVisible] = useState(false);

@@ -85,6 +85,15 @@ npm install
 ```
 <br>
 
+# Variáveis de Ambiente
+
+Para rodar localmente, copie o arquivo `.env.example` para `.env`
+
+| Nome           | Descrição                              | Onde obter                        |
+| -------------- | -------------------------------------- | --------------------------------- |
+| `REACT_APP_THEMEALDB_KEY`      | Chave de API utilizada para autenticar requisições à API do TheMealDB, que fornece dados sobre receitas e ingredientes de pratos. | https://www.themealdb.com/api.php |
+<br>
+
 ## 📃 Licença
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 <br>

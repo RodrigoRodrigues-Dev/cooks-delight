@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { MdOutlineMenu } from 'react-icons/md';
-
 import colors from '../../../styles/colors';
 
 interface HeaderProps {
@@ -80,11 +79,17 @@ export const LinkStyled = styled.li<HeaderProps>`
   `}
 
   ${({ $location, $itemLocation, $scrolled }) =>
-    $location === $itemLocation &&
-    css`
-      border-bottom-color: ${colors.PrimaryColor3};
-      color: ${$scrolled ? colors.Light : colors.Dark};
-    `}
+    $location === $itemLocation
+      ? css`
+          border-bottom-color: ${colors.PrimaryColor3};
+          color: ${$scrolled ? colors.Light : colors.Dark};
+        `
+      : css`
+          border-bottom-color: transparent;
+          color: ${$scrolled
+            ? 'rgba(255, 255, 255, 0.4)'
+            : 'rgba(38, 37, 34, 0.4)'};
+        `}
 
   &:hover {
     cursor: pointer;
@@ -119,6 +124,7 @@ export const HamburgerMenuButton = styled.button<HeaderProps>`
 
   &:hover {
     cursor: pointer;
+
     ${({ $scrolled }) => css`
       background-color: ${$scrolled
         ? 'rgba(255, 251, 242, 0.25)'

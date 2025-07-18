@@ -5,7 +5,7 @@
 O **Cooks Delight** é uma aplicação React que permite aos usuários explorar, filtrar e visualizar receitas de diversas categorias com navegação suave entre seções, busca dinâmica integrada e páginas de detalhes completas para cada prato.
 
 <p align="center">
-  <img src=".github/preview-home.png" width="100%" />
+  <img src=".github/assets/images/preview-home.png" width="100%" />
 </p>
 
 
@@ -31,7 +31,7 @@ A aplicação utiliza o **Redux Toolkit** com **RTK Query** para gerenciamento
 A página de receita permite aos usuários visualizar todos os detalhes de um prato — incluindo título, imagem em alta resolução, instruções passo a passo, lista dinâmica de ingredientes com medidas — e ainda navegar suavemente pelas seções relacionadas.
 
 <p align="center">
-  <img src=".github/preview-recipe.png" width="100%" />
+  <img src=".github/assets/images/preview-recipe.png" width="100%" />
 </p>
 
 
